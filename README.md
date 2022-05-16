@@ -8,4 +8,4 @@
 - [x] 3. [Intro to HTML and CSS](task_html_css_intro)
 - [x] 4. [Responsive Web Design](task_responsive_web_design)
 - [x] 5. [Javascript Basics](task_js_basics)
-- [ ] 6. [Document Object Model](task_js_dom)
+- [x] 6. [Document Object Model](task_js_dom)
