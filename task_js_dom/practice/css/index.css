@@ -1,0 +1,162 @@
+body {
+    margin:0;
+}
+.hidden-menu {
+    display: block;
+    position: fixed;
+    list-style:none;
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+    width: 220px;
+    background-color: #eee;
+    height: 100%;
+    top: 0;
+    left: -220px;
+    transition: left .2s;
+    z-index: 2;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+}
+
+.hidden-menu-ticker {
+    display: none;
+}
+
+.btn-menu {
+    color: #fff;
+    background-color: #666;
+    padding: 5px;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+    transition: left .23s;
+    z-index: 3;
+    width: 25px;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+}
+
+.btn-menu span {
+    display: block;
+    height: 5px;
+    background-color: #fff;
+    margin: 5px 0 0;
+    transition: all .1s linear .23s;
+    position: relative;
+}
+
+.btn-menu span.first {
+    margin-top: 0;
+}
+
+.hidden-menu-ticker:checked ~ .btn-menu {
+    left: 180px;
+}
+
+.hidden-menu-ticker:checked ~ .hidden-menu {
+    left: 0;
+}
+
+.hidden-menu-ticker:checked ~ .btn-menu span.first {
+    -webkit-transform: rotate(45deg);
+    top: 10px;
+}
+
+.hidden-menu-ticker:checked ~ .btn-menu span.second {
+    opacity: 0;
+}
+
+.hidden-menu-ticker:checked ~ .btn-menu span.third {
+    -webkit-transform: rotate(-45deg);
+    top: -10px;
+}
+
+@media screen and (min-width: 800px)  {
+    .container {
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    }
+}
+
+.description {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#img {
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+}
+
+#description {
+    text-align: left;
+}
+
+@media screen and (min-height: 300px) {
+    .description {
+        justify-content: center;
+        text-align: center;
+    }
+    #img {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+.row {
+    padding: 10px;
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: dimgrey;
+    justify-content: center;
+    display: flex;
+}
+
+@media screen and (min-width: 300px) {
+    footer {
+
+        height: 40px;
+        flex-direction: row;
+    }
+}
+@media screen and (min-width: 800px) {
+    footer {
+        height: 100px;
+        flex-direction: column;
+    }
+}
+
+.copyright {
+    box-sizing: content-box;
+    width:auto;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: dimgrey;
+}
+.menu-item {
+    padding: 10px;
+}
+
+.menu-item:first-child {
+    padding-top: 40px;
+}
+
